@@ -8,6 +8,7 @@ async function onStart() {
     model = await nsfwjs.load()
     console.log('Loaded nsfw.js\ntest image:')
     console.dir(await classify('https://nerdist.com/wp-content/uploads/2020/07/maxresdefault.jpg'))
+    console.log('Should be classified as "Neutral"')
 }
 
 async function classify(imgurl) {
