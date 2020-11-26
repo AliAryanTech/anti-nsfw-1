@@ -2,28 +2,33 @@ const messageHandler = require("./handlers/message");
 const Discord = require('discord.js');
 const nsfwHandler = require("./handlers/nsfw");
 const client = new Discord.Client();
+const { log } = require('./util/logging');
 require('dotenv').config();
+require('colors');
 
 const handlers = [
     messageHandler,
     nsfwHandler
 ]
 
+const dateboot = new Date();
+log(`\n----- ${dateboot.toLocaleString('en-us')} -----\n`, true, false)
+
 for (const handler of handlers) {
     try {
         handler.onStart();
     } catch (e) {
-        console.log(`${handler.info.name} handler threw an error while running start function - ${e}`) 
+        log(`${handler.info.name} handler threw an error while running start function - ${e}`) 
     }
 }
 
 client.on('ready', () => {
-    console.log(`Logged in - ${client.user.tag}`);
+    log(`Logged in - ${client.user.tag}`);
     for (const handler of handlers) {
         try {
             handler.onReady();
         } catch (e) {
-            console.log(`${handler.info.name} handler threw an error while running ready function - ${e}`) 
+            log(`${handler.info.name} handler threw an error while running ready function`.red + e) 
         }
     }
 });

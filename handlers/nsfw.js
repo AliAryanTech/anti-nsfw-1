@@ -1,14 +1,13 @@
 const nsfwjs = require('nsfwjs');
 const axios = require('axios')
 const tf = require('@tensorflow/tfjs-node')
+const { log } = require('../util/logging');
 
 let model;
 
 async function onStart() {
     model = await nsfwjs.load()
-    console.log('Loaded nsfw.js\ntest image:')
-    console.dir(await classify('https://nerdist.com/wp-content/uploads/2020/07/maxresdefault.jpg'))
-    console.log('Should be classified as "Neutral"')
+    log('Loaded nsfw.js!')
 }
 
 async function classify(imgurl) {

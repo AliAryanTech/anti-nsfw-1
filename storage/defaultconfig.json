@@ -1,0 +1,5 @@
+{
+    "prefix": "-",
+    "--comment--": "min is the minimum prediction level to deam an attachment as nsfw.",
+    "min": "0.65"
+}
