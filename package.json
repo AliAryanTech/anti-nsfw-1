@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/Waves-rgb/anti-nsfw#readme",
   "dependencies": {
+    "@tensorflow/tfjs": "^2.7.0",
+    "@tensorflow/tfjs-node": "^2.7.0",
+    "axios": "^0.21.0",
     "discord.js": "^12.5.0",
     "dotenv": "^8.2.0",
     "nsfwjs": "^2.3.0"
