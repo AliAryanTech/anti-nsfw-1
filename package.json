@@ -4,7 +4,7 @@
   "description": "Discord bot (that tries its best) to delete nsfw content in non nsfw channels.",
   "main": "index.js",
   "scripts": {
-    "test": "echo no tests"
+    "test": "node -c"
   },
   "repository": {
     "type": "git",
