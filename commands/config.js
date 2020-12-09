@@ -50,7 +50,10 @@ async function run(msg) {
 				break;
 			case 'probability':
 				try {
-					setValue(msg.guild.id, 'probabilty', args[3]/100)
+					if (!(args[3] <= 100 && args[3] >= 0))
+						return msg.channel.send("Probability must be between 0 and 100!");
+						
+					setValue(msg.guild.id, 'probability', args[3]/100)
 					msg.channel.send(`This server\'s probability is now ${args[3]}%`);
 				} catch(e) {
 					console.log(e)
