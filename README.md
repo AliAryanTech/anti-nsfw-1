@@ -1,4 +1,7 @@
 # Anti-NSFW
+[![Build Status](https://travis-ci.com/Waves-rgb/anti-nsfw.svg?branch=main)](https://travis-ci.com/Waves-rgb/anti-nsfw)
+![Line count](https://img.shields.io/tokei/lines/github/waves-rgb/anti-nsfw)
+![Last commit](https://img.shields.io/github/last-commit/waves-rgb/anti-nsfw)
 
 Discord bot (that tries its best) to delete nsfw content in non nsfw channels.
 
@@ -18,5 +21,5 @@ TOKEN=<bot token>
 ```
 
 # Todo:
- - [ ] Add server configurations.
+ - [x] Add server configurations.
  - [ ] Add a way to add user defined channels to ignore.
